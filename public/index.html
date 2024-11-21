@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Note App</h1>
+    <!-- Add Note Section -->
+    <div class="add-note">
+      <textarea id="noteInput" placeholder="Write a note..." required></textarea>
+      <button id="addNoteButton">Add Note</button>
+    </div>
+    <!-- Notes List -->
+  </div>
+  <div class="container">
+    <div id="noteList" class="note-list"></div>
+  </div>
+  <!-- Edit Modal -->
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Edit Note</h2>
+      <textarea id="editInput" placeholder="Edit your note..." required></textarea>
+      <div class="modal-actions">
+        <button id="saveEdit">Save</button>
+        <button id="cancelEdit">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!-- Notification -->
+  <div id="notification" class="notification hidden"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
