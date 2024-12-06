@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Note App</h1>
+    <p id="userName"></p>
+    <button id="logoutButton">Log Out</button>
+    <div class="add-note">
+      <textarea id="noteInput" placeholder="Write a note..." required></textarea>
+      <button id="addNoteButton">Add Note</button>
+    </div>
+    <div id="noteList" class="note-list"></div>
+  </div>
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Edit Note</h2>
+      <textarea id="editInput" placeholder="Edit your note..." required></textarea>
+      <div class="modal-actions">
+        <button id="saveEdit">Save</button>
+        <button id="cancelEdit">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div id="notification" class="notification hidden"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
