@@ -20,5 +20,8 @@
 		"jwt-decode": "^4.0.0",
 		"mongoose": "^8.9.2",
 		"supertest": "^7.0.0"
+	},
+	"devDependencies": {
+		"cypress": "^13.17.0"
 	}
 }
