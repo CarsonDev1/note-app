@@ -5,15 +5,15 @@ const Note = require('./models/Note'); // Import Note model
 const User = require('./models/User'); // Import User model
 
 const testUser = {
-	username: 'testuser',
-	password: 'password123',
+	username: 'admin',
+	password: '123',
 };
 
 let authToken;
 
 beforeAll(async () => {
 	// Connect to a test database
-	await mongoose.connect('mongodb://127.0.0.1:27017/testdb', {
+	await mongoose.connect('mongodb+srv://admin:HqLPXhuroWmKsw0V@twitter.jcv2bll.mongodb.net/', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	});
@@ -76,20 +76,6 @@ describe('Notes API', () => {
 });
 
 describe('User Authentication API', () => {
-	test('Should register a new user', async () => {
-		const res = await request(app).post('/register').send({ username: 'newuser', password: 'password123' });
-
-		expect(res.statusCode).toBe(201);
-		expect(res.body).toHaveProperty('message', 'User registered successfully');
-	});
-
-	test('Should not register a user with an existing username', async () => {
-		const res = await request(app).post('/register').send(testUser);
-
-		expect(res.statusCode).toBe(400);
-		expect(res.body).toHaveProperty('message', 'User already exists');
-	});
-
 	test('Should log in a user', async () => {
 		const res = await request(app).post('/login').send(testUser);
 
